@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+.content-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.header, .content, .footer {
+    flex: 1;
+}
