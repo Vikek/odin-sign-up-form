@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Norse-Bold";
+    src: url(assets/Norse-Bold.otf);
+}
+
 html {
     height: 100%;
 }
@@ -16,6 +21,7 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     width: 100%;
@@ -24,16 +30,34 @@ body {
 }
 
 .logo-section {
+    background-image: url(assets/jon-tang-sUBuGmG9gA0-unsplash.jpg);
+    background-size: cover;
     height: 100%;
-    display: flex;
     flex: 0.5;
-    flex-direction: column;
     overflow: auto;
 }
 
-img {
-    height: 100%;
-    object-fit: cover;
+.logo-background {
+    position: relative;
+    background-color: #0000009c;
+    width: 100%;
+    height: auto;
+    top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.logo-background h1 {
+    font-family: "Norse-Bold", sans-serif;
+    font-size: 5em;
+    color: white;
+}
+
+.logo-background img {
+    height: 90px;
 }
 
 .image-credit {
@@ -57,11 +81,11 @@ img {
 }
 
 .header, .content, .footer {
+    display: flex;
     flex: 1;
 }
 
 .header {
-    display: flex;
     align-items: end;
     margin-left: 20px;
     margin-bottom: 30px;
@@ -75,12 +99,10 @@ img {
     box-shadow: 0px 1px 5px grey;
     color: #282847;
     padding: 20px;
-    display: flex;
     align-items: center;
 }
 
 .footer {
-    display: flex;
     flex-direction: column;
     padding: 20px;
     margin-left: 20px;
@@ -101,7 +123,7 @@ img {
 .footer input[type="submit"]:hover {
     background-color: #5790a3;
     translate: 1px 1px;
-    box-shadow: 2px 2px 10px rgb(70, 70, 70);
+    box-shadow: 2px 2px 10px grey;
 }
 
 .footer a{
